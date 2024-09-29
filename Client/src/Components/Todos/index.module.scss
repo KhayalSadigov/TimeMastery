@@ -1,0 +1,128 @@
+.todos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  .todoList {
+    padding: 15px 15px 0 15px;
+    height: 80%;
+    width: 100%;
+    .content {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 6px; /* width of the entire scrollbar */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba(128, 128, 128, 0.496); /* color of the tracking area */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #1976d2; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+      }
+      .todo {
+        height: calc(100% / 3);
+        padding-right: 10px;
+        padding-left: 5px;
+        padding-top: 5px;
+        transition: .2s;
+        .body {
+          height: 90%;
+          display: flex;
+          justify-content: space-between;
+          border-radius: 20px;
+          color: black;
+          align-items: center;
+          box-shadow: rgba(53, 53, 53, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          display: flex;
+          padding: 5px 10px;
+          p{
+            width: 80%;
+          }
+          .priority{
+            transform: translateY(3px);
+          }
+          .btns {
+            display: flex;
+            .del {
+              background-color: red;
+              height: 100%;
+              color: white;
+              padding: 10px 15px;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 20px;
+              transform: scale(.8);
+            }
+            .mark {
+              background-color: green;
+              height: 100%;
+              color: white;
+              padding: 10px 15px;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 20px;
+              transform: scale(.8);
+            }
+            .edit {
+              transform: scale(.8);
+              background-color: orange;
+              height: 100%;
+              color: white;
+              padding: 10px 15px;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    padding: 15px;
+    input {
+      height: 40px;
+      width: 100%;
+      padding: 0 15px;
+      border: 1px solid grey;
+      border-radius: 30px 0px 0px 30px;
+    }
+    select {
+      border: 1px solid grey;
+      height: 40px;
+      outline: none;
+    }
+    .add {
+      border: 1px solid grey;
+      border-radius: 0px 30px 30px 0px;
+
+      border: none;
+      background: none;
+      background-color: #1976d2;
+      transition: 0.2s;
+      cursor: pointer;
+      height: 40px;
+      width: 80px;
+      color: white;
+      &:hover {
+        background-color: #04294d;
+      }
+    }
+  }
+}
